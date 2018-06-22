@@ -1,0 +1,237 @@
+section.carousel {
+    padding: 0 65px;
+    max-width: 1340px;
+    width: 100%;
+    margin: 50px auto;
+    font-size: 1.2em;
+    line-height: 1.5;
+    position: relative;
+
+    &.disabled {
+        &:after {
+            content: '';
+            z-index: 999;
+
+            @include full-absolute();
+        }
+    }
+
+    .carousel-wrapper {
+        @include full-block();
+
+        .carousel-inner {
+            overflow: hidden;
+
+            @include full-block();
+
+            ul.carousel-list {
+                @include flex-box();
+                @include flex-wrap(nowrap);
+                @include flex-direction(row);
+                @include align-items(flex-start);
+
+                li.carousel-item,
+                li.carousel-item.clone {
+
+                    .carousel-content {
+                        padding: 15px;
+
+                        img { @include background-size(cover); margin-bottom: 10px; }
+
+                        h2 {
+                            margin-bottom: 10px;
+                            color: $blue;
+                            font-size: 1.3em;
+                            line-height: 1.1;
+                        }
+                    }
+                }
+
+                &.center-mode {
+                    li.carousel-item {
+
+                        .carousel-content {
+                            background-color: transparent;
+
+                            @include scale(.8);
+                            @include transition(transform ease-out, background-color ease-out);
+                        }
+
+                        &.active {
+                            .carousel-content {
+                                background-color: rgba(0,0,0,0.1);
+
+                                @include scale(1);
+                            }
+                        }
+
+                        &.clone.active-clone {
+                            .carousel-content {
+                                background-color: rgba(0,0,0,0.1);
+
+                                @include scale(1);
+                                @include transition(transform ease-out);
+                            }
+                        }
+                    }
+                }
+            }
+
+            @media only screen and (max-width: 500px) {
+                width: 100%;
+                margin-left: 0;
+
+                ul {
+                    li.carousel-item { padding-left: 0; }
+                }
+            }
+        }
+    }
+
+    nav {
+        &.dots {
+            text-align: center;
+            margin-top: 40px;
+
+            @include full-block();
+            ul.dots-list {
+                position: relative;
+                margin-left: -10px;
+
+                @include flex-box();
+                @include flex-wrap(wrap);
+                @include align-items(center);
+                @include justify-content(center);
+
+                li.dots-item {
+                    display: inline-block;
+                    position: relative;
+                    width: 20px;
+                    height: 20px;
+                    background-color: $blue;
+                    margin-left: 10px;
+                    cursor: pointer;
+
+                    @include border-radius(50%);
+                    @include transition(background-color .5s ease-out);
+
+                    &.active { background-color: $gray; }
+
+                    @media only screen and (max-width: 768px) {
+                        margin-bottom: 10px;
+                    }
+
+                    @media only screen and (max-width: 500px) {
+                        width: 15px; height: 15px;
+                    }
+                }
+            }
+        }
+    }
+
+    .carousel-navigation-left,
+    .carousel-navigation-right {
+        position: absolute;
+        top: 50%;
+        width: 60px;
+        height: 60px;
+        overflow: hidden;
+        cursor: pointer;
+
+        @include translateY(-50%);
+
+        i {
+            position: relative;
+            display: inline-block;
+            border: solid $blue;
+            border-width: 0 2px 2px 0;
+            display: inline-block;
+            padding: 20px;
+            top: 10px;
+
+            &.arrow-left { @include rotate(135deg); }
+            &.arrow-right { @include rotate(-45deg); } 
+        }
+    }
+
+    .carousel-navigation-left {
+        left: 5px;
+        i { left: 20px; }
+    }
+    .carousel-navigation-right {
+        right: 5px;
+        i { right: 0; }
+    }
+
+    &.loading {
+
+        &:after,
+        &:before {
+            @include opacity(0);
+            @include transition (opacity .5s ease-in-out);
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            display: inline-block;
+            left: calc(50% - 15px);
+            top: 50%;
+            z-index: 100;
+
+            @include loader($blue, $gray, .3s, 6px, 30px, 30px);
+            @include translate(-50%, -50%);
+            @include background-size(cover);
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            z-index: 99;
+            background-color: white;
+        }
+    }
+
+    &.loading.show {
+        height: 100%;
+        max-height: 300px;
+        overflow: hidden;
+        
+        &:after,
+        &:before {
+            @include opacity(1);
+        }
+    }
+
+    @media only screen and (max-width: 500px) {
+        padding: 40px 20px 0;
+
+        .carousel-navigation-left,
+        .carousel-navigation-right {
+            width: 30px;
+            height: 30px;
+            top: 0;
+
+            @include translateY(0);
+
+            i {
+                border-width: 0 3px 3px 0;
+                padding: 6px;
+                top: 4px;
+            }
+        }
+
+        .carousel-navigation-left {
+            left: calc(50% - 32px);
+            i { left: 11px; }
+        }
+        .carousel-navigation-right {
+            right: calc(50% - 30px);
+            i { right: -5px; }
+        }
+    }
+}
