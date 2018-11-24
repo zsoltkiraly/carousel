@@ -8,34 +8,34 @@
 ## SETTINGS
 
 ```html
-    <script>
-    window.addEventListener('load', function() {
-        carousel.app(
-            config = {
-                render: 'carousel-1',
-                centerMode: true, //works only in 3 units & pager = one
-                desktop: {
-                    breakpoint: 992,
-                    slidesToShow: 3,
-                },
-                tablet: {
-                    breakpoint: 992,
-                    slidesToShow: 2
-                },
-                mobile: {
-                    breakpoint: 768,
-                    slidesToShow: 1
-                },
-                smallMobile: {
-                    breakpoint: 500,
-                    slidesToShow: 1
-                },
-                pager: 'one', //one or area
-                transitionTime: 600
-            }
-        );
-    }, false);
-    </script>
+<script>
+window.addEventListener('load', function() {
+    carousel.app(
+        config = {
+            render: 'carousel-1',
+            centerMode: true, //works only in 3 units & pager = one
+            desktop: {
+                breakpoint: 992,
+                slidesToShow: 3,
+            },
+            tablet: {
+                breakpoint: 992,
+                slidesToShow: 2
+            },
+            mobile: {
+                breakpoint: 768,
+                slidesToShow: 1
+            },
+            smallMobile: {
+                breakpoint: 500,
+                slidesToShow: 1
+            },
+            pager: 'one', //one or area
+            transitionTime: 600
+        }
+    );
+}, false);
+</script>
 ```
 
 #
