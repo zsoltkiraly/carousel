@@ -5,6 +5,28 @@ v1.1.1 - 2017-05-09
 
 var carousel = function() {
 
+    function signatura() {
+        if (window['console']) {
+            const text = {
+                black: '%c     ',
+                blue: '%c   ',
+                author: '%c  Zsolt Király  ',
+                github: '%c  https://zsoltkiraly.com/'
+            }
+
+            const style = {
+                black: 'background: #282c34',
+                blue: 'background: #61dafb',
+                author: 'background: black; color: white',
+                github: ''
+            }
+
+            console.log(text.black + text.blue + text.author + text.github, style.black, style.blue, style.author, style.github);
+        }
+    }
+
+    signatura();
+
     var forEach = function (array, callback, scope) {
         var i = 0;
         for (; i < array.length; i++) {
