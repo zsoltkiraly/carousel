@@ -665,7 +665,7 @@ var carousel = function() {
         }, 1000);
     }
 
-    function app() {
+    function app(config) {
         var carouselId = document.querySelector('#' + config.render + '');
 
         if(carouselId) {

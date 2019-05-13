@@ -111,30 +111,28 @@
     </section>
     <script>
     window.addEventListener('load', function() {
-        carousel.app(
-            config = {
-                render: 'carousel-1',
-                centerMode: true, //works only in 3 units & pager = one
-                desktop: {
-                    breakpoint: 992,
-                    slidesToShow: 3,
-                },
-                tablet: {
-                    breakpoint: 992,
-                    slidesToShow: 2
-                },
-                mobile: {
-                    breakpoint: 768,
-                    slidesToShow: 1
-                },
-                smallMobile: {
-                    breakpoint: 500,
-                    slidesToShow: 1
-                },
-                pager: 'one', //one or area
-                transitionTime: 600
-            }
-        );
+        carousel.app({
+            render: 'carousel-1',
+            centerMode: true, //works only in 3 units & pager = one
+            desktop: {
+                breakpoint: 992,
+                slidesToShow: 3,
+            },
+            tablet: {
+                breakpoint: 992,
+                slidesToShow: 2
+            },
+            mobile: {
+                breakpoint: 768,
+                slidesToShow: 1
+            },
+            smallMobile: {
+                breakpoint: 500,
+                slidesToShow: 1
+            },
+            pager: 'one', //one or area
+            transitionTime: 300
+        });
     }, false);
     </script>
 
@@ -146,6 +144,120 @@
 
         <p>Mauris fermentum elementum urna, sed blandit metus elementum at. Nullam ac dui non orci volutpat lobortis in quis libero. Duis dignissim rutrum leo ac mollis. Sed et volutpat ligula, sollicitudin porttitor elit. Maecenas faucibus molestie mauris, ut efficitur lorem placerat.</p>
     </section>
+
+    <section id="carousel-2" class="carousel loading show">
+        <div class="carousel-wrapper">
+            <div class="carousel-inner">
+                <ul class="carousel-list">
+                    <li class="carousel-item">
+                        <div class="carousel-content">
+                            <img src="images/9.jpg" alt="">
+                            <h2>In the Heart of the Sea</h2>
+                            <p>Lorem placerat maecenas faucibus molestie mauris, ut efficitur. Mauris fermentum elementum urna, sed blandit metus elementum at.</p>
+                        </div>
+                    </li>
+                    <li class="carousel-item">
+                        <div class="carousel-content">
+                            <img src="images/8.jpg" alt="">
+                            <h2>Hidden Figures</h2>
+                            <p>Maecenas faucibus molestie mauris, ut efficitur lorem placerat. Mauris fermentum elementum urna, sed blandit metus elementum at.</p>
+                        </div>
+                    </li>
+                    <li class="carousel-item">
+                        <div class="carousel-content">
+                            <img src="images/7.jpg" alt="">
+                            <h2>Hacksaw Ridge</h2>
+                            <p>Faucibus molestie mauris, ut efficitur lorem placerat. Mauris fermentum elementum urna, sed blandit metus elementum at.</p>
+                        </div>
+                    </li>
+                    <li class="carousel-item">
+                        <div class="carousel-content">
+                            <img src="images/6.jpg" alt="">
+                            <h2>Cloverfield Lane 10</h2>
+                            <p>Elementum urna, sed blandit metus elementum at. Maecenas faucibus molestie mauris, ut efficitur lorem placerat. Mauris fermentum.</p>
+                        </div>
+                    </li>
+                    <li class="carousel-item">
+                        <div class="carousel-content">
+                            <img src="images/5.jpg" alt="">
+                            <h2>The Martian</h2>
+                            <p>Cenas faucibus molestie mauris, ut efficitur lorem placerat. Mauris fermentum elementum urna, sed blandit metus elementum at.</p>
+                        </div>
+                    </li>
+                    <li class="carousel-item">
+                        <div class="carousel-content">
+                            <img src="images/4.jpg" alt="">
+                            <h2>Fantastic Beasts</h2>
+                            <p>Auris maecenas faucibus molestie mauris, ut efficitur lorem placerat. Fermentum elementum urna, sed blandit metus elementum at.</p>
+                        </div>
+                    </li>
+                    <li class="carousel-item">
+                        <div class="carousel-content">
+                            <img src="images/3.jpg" alt="">
+                            <h2>Doctor Strange</h2>
+                            <p>Aucibus molestie mauris, ut efficitur lorem placerat. Mauris fermentum elementum urna, sed blandit metus elementum at.</p>
+                        </div>
+                    </li>
+                    <li class="carousel-item">
+                        <div class="carousel-content">
+                            <img src="images/2.jpg" alt="">
+                            <h2>The Dressmaker</h2>
+                            <p>Ibus efficitur molestie mauris, ut lorem placerat. Mauris fermentum elementum urna, sed blandit metus elementum at.</p>
+                        </div>
+                    </li>
+                    <li class="carousel-item">
+                        <div class="carousel-content">
+                            <img src="images/1.jpg" alt="">
+                            <h2>The Accountant</h2>
+                            <p>Lorem placerat maecenas faucibus molestie mauris, ut efficitur. Mauris fermentum elementum urna, sed blandit metus elementum at.</p>
+                        </div>
+                    </li>
+                    <li class="carousel-item">
+                        <div class="carousel-content">
+                            <img src="images/11.jpg" alt="">
+                            <h2>Fantastic Beasts</h2>
+                            <p>Auris maecenas faucibus molestie mauris, ut efficitur lorem placerat. Fermentum elementum urna, sed blandit metus elementum at.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <script>
+    window.addEventListener('load', function() {
+        carousel.app({
+            render: 'carousel-2',
+            centerMode: true, //works only in 3 units & pager = one
+            desktop: {
+                breakpoint: 992,
+                slidesToShow: 3,
+            },
+            tablet: {
+                breakpoint: 992,
+                slidesToShow: 2
+            },
+            mobile: {
+                breakpoint: 768,
+                slidesToShow: 1
+            },
+            smallMobile: {
+                breakpoint: 500,
+                slidesToShow: 1
+            },
+            pager: 'one', //one or area
+            transitionTime: 1000
+        });
+    }, false);
+    </script>
+
+<section class="basic-content">
+    <h2>Sed et volutpat ligula</h2>
+    <p>Donec quis lorem sit amet tortor varius consectetur. Aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dictum quam diam, sit amet iaculis ex commodo id. Maecenas vitae finibus massa. Suspendisse potenti. Donec pulvinar nunc ut elit porttitor mattis.</p>
+
+    <p>Cras non arcu quis turpis lacinia suscipit et a purus. Mauris eu maximus massa. Nam sed vestibulum orci, ut cursus neque. Fusce eget dui eros. Mauris dictum lacus a eros fermentum, eu fringilla elit scelerisque. Sed et varius mauris. Pellentesque in ligula a mi lobortis rutrum. Vestibulum ac pretium nulla. Pellentesque tempor augue at purus tincidunt, maximus semper nisl blandit.</p>
+
+    <p>Mauris fermentum elementum urna, sed blandit metus elementum at. Nullam ac dui non orci volutpat lobortis in quis libero. Duis dignissim rutrum leo ac mollis. Sed et volutpat ligula, sollicitudin porttitor elit. Maecenas faucibus molestie mauris, ut efficitur lorem placerat.</p>
+</section>
 
     <footer>
         <span>GitHub:</span> <a href="https://github.com/zsoltkiraly" title="GitHub" target="_blank">https://github.com/zsoltkiraly</a>
