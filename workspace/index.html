@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
     <meta charset="utf-8">
 
+    <link rel="shortcut icon" href="#" />
     <link rel="stylesheet" href="css/main.css">
     <script src="js/scripts.min.js"></script>
 </head>
@@ -113,7 +114,7 @@
     window.addEventListener('load', function() {
         carousel.app({
             render: 'carousel-1',
-            centerMode: true, //works only in 3 units & pager = one
+            centerMode: true,
             desktop: {
                 breakpoint: 992,
                 slidesToShow: 3,
@@ -130,7 +131,7 @@
                 breakpoint: 500,
                 slidesToShow: 1
             },
-            pager: 'one', //one or area
+            pager: 'one',
             transitionTime: 300
         });
     }, false);
@@ -227,7 +228,7 @@
     window.addEventListener('load', function() {
         carousel.app({
             render: 'carousel-2',
-            centerMode: true, //works only in 3 units & pager = one
+            centerMode: false,
             desktop: {
                 breakpoint: 992,
                 slidesToShow: 3,
@@ -244,8 +245,8 @@
                 breakpoint: 500,
                 slidesToShow: 1
             },
-            pager: 'one', //one or area
-            transitionTime: 1000
+            pager: 'one',
+            transitionTime: 700
         });
     }, false);
     </script>
